@@ -1,0 +1,19 @@
+def compose(f,g):
+  return lambda *x: f(g(*x))
+  
+  
+OR
+
+
+def compose(f,g):
+    # Compose the two functions here!
+    def z(*arg,**kw):
+      return f(g(*arg,**kw))
+    return z
+    
+    
+OR
+
+
+def compose(f,g):
+    return lambda *args, **kwargs: f(g(*args, **kwargs))
